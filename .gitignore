@@ -1,16 +1,25 @@
 # maven ignore
 target/
+*/target
+*/.mvn
 
 # eclipse ignore
 .settings/
 .project
 .classpath
+*/.project
+*/.settings/
+*/.classpath
 
 # idea ignore
 .idea/
 *.ipr
 *.iml
 *.iws
+/.idea/
+*/.settings
+*/.springBeans
+/.settings/
 
 # temp ignore
 *.log
