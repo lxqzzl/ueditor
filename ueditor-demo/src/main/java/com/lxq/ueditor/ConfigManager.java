@@ -160,8 +160,7 @@ public final class ConfigManager {
 			this.jsonConfig = jsonConfig;
 		} catch ( Exception e ) {
 			this.jsonConfig = null;
-		}
-		
+		}		
 	}
 	
 	private String[] getArray ( String key ) throws JSONException {
