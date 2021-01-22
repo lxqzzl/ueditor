@@ -22,11 +22,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
-		</dependency>
+
 		<!-- ueditot依赖的json包 -->
 		<dependency>
 			<groupId>org.json</groupId>
@@ -57,6 +53,14 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
+		</dependency>
+		
+		<!-- alijson优化 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.58</version>
+			<optional>true</optional>
 		</dependency>
 		
 		<!-- 阿里云服务 -->

@@ -2,7 +2,7 @@ package com.lxq.ueditor.define;
 
 /**
  * action状态枚举类
- * @author a1
+ * @author l1
  *
  */
 

@@ -2,9 +2,10 @@ package com.lxq.ueditor.define;
 
 /**
  * 处理状态接口
- * @author hancong03@baidu.com
+ * @author l1
  *
  */
+
 public interface State {
 	/**
 	 * 是否成功

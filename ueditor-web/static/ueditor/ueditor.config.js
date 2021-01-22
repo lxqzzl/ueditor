@@ -31,9 +31,7 @@
         UEDITOR_HOME_URL: URL
 
         // 服务器统一请求接口路径
-        // , serverUrl: "https://operationgwdev.bgycc.com/zuul/phantom-service-storage/ueditor/exec"
-        // , serverUrl: "http://192.168.10.10:60100/api/tms/eduitor/config"
-        , serverUrl: "http://192.168.10.10:7004/ueditor/config"
+        , serverUrl: "http://localhost:7004/ueditor/config"
 
         //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的重新定义
         , toolbars: [[

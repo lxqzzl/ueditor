@@ -12,16 +12,16 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import com.lxq.entity.AliyunConfigEntity;
 import com.lxq.ueditor.PathFormat;
 import com.lxq.ueditor.define.AppInfo;
 import com.lxq.ueditor.define.BaseState;
 import com.lxq.ueditor.define.FileType;
 import com.lxq.ueditor.define.State;
+import com.lxq.ueditor.entity.AliyunConfigEntity;
 
 /**
  * 二进制文件上传
- * @author lxq
+ * @author l1
  *
  */
 
@@ -53,11 +53,11 @@ public class BinaryUploader {
 			originFileName = originFileName.substring(0, originFileName.length() - suffix.length());
 			savePath = savePath + suffix;
 			
-			long maxSize = ((Long) conf.get("maxSize")).longValue();
-
+			long maxSize = Long.valueOf(conf.get("maxSize").toString());
 			if (!validType(suffix, (String[]) conf.get(ALLOW_FILES))) {
 				return new BaseState(false, AppInfo.NOT_ALLOW_FILE_TYPE);
 			}
+			
 			savePath = PathFormat.parse(savePath, originFileName);
 			localSavePathPrefix = localSavePathPrefix + savePath; 
 			String physicalPath = localSavePathPrefix;
@@ -83,7 +83,7 @@ public class BinaryUploader {
 
 	private static boolean validType(String type, String[] allowTypes) {
 		List<String> list = Arrays.asList(allowTypes);
-
+        
 		return list.contains(type);
 	}
 }

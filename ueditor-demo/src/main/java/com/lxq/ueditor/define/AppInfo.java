@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * 信息枚举类
- * @author a1
+ * @author l1
  *
  */
 

@@ -15,14 +15,14 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import com.lxq.entity.AliyunConfigEntity;
 import com.lxq.ueditor.define.AppInfo;
 import com.lxq.ueditor.define.BaseState;
 import com.lxq.ueditor.define.State;
+import com.lxq.ueditor.entity.AliyunConfigEntity;
 
 /**
  * 存储管理类
- * @author lxq
+ * @author l1
  *
  */
 

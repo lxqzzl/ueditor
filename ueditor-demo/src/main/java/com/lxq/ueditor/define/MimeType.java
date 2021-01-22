@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * MIME 类型
- * @author lxq
+ * @author l1
  *
  */
 

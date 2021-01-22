@@ -9,7 +9,7 @@ import com.aliyun.oss.model.PutObjectResult;
 
 /**
  * 阿里云上传
- * @author lxq
+ * @author l1
  *
  */
 

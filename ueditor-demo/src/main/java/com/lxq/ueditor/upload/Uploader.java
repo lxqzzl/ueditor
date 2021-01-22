@@ -3,12 +3,12 @@ package com.lxq.ueditor.upload;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
-import com.lxq.entity.AliyunConfigEntity;
 import com.lxq.ueditor.define.State;
+import com.lxq.ueditor.entity.AliyunConfigEntity;
 
 /**
  * 文件上传
- * @author lxq
+ * @author l1
  *
  */
 
@@ -28,14 +28,12 @@ public class Uploader {
 	public final State doExec(AliyunConfigEntity aliyunConfigEntity) {
 		String filedName = (String) this.conf.get("fieldName");
 		State state = null;        
-		
 		if (TRUE.equals(this.conf.get(IS_BASE64))) {
 			state = Base64Uploader.save(this.request.getParameter(filedName),
 					this.conf, aliyunConfigEntity);
 		} else {
 			state = BinaryUploader.save(this.request, this.conf, aliyunConfigEntity);
 		}
-
 		return state;
 	}
 }

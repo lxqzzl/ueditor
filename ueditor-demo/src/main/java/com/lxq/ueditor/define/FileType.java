@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * 文件类型
- * @author a1
+ * @author l1
  *
  */
 

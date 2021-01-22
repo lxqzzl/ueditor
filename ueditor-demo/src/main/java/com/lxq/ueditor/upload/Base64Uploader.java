@@ -7,16 +7,16 @@ import org.apache.commons.codec.binary.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.lxq.entity.AliyunConfigEntity;
 import com.lxq.ueditor.PathFormat;
 import com.lxq.ueditor.define.FileType;
 import com.lxq.ueditor.define.State;
+import com.lxq.ueditor.entity.AliyunConfigEntity;
 import com.lxq.ueditor.define.AppInfo;
 import com.lxq.ueditor.define.BaseState;
 
 /**
  * Base64文件上传
- * @author lxq
+ * @author l1
  *
  */
 
@@ -26,7 +26,7 @@ public final class Base64Uploader {
 		System.out.println("进入Base64Uploader.save");
 		byte[] data = decode(content);
 
-		long maxSize = ((Long) conf.get("maxSize")).longValue();
+		long maxSize = Long.valueOf(conf.get("maxSize").toString());
 
 		if (!validSize(data, maxSize)) {
 			return new BaseState(false, AppInfo.MAX_SIZE);

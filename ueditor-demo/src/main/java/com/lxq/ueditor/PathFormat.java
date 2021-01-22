@@ -6,9 +6,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * 
- * @author a1
- *
+ * 路径格式化
+ * @author l1
  */
 
 public class PathFormat {

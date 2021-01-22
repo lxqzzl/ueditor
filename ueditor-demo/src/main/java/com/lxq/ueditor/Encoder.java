@@ -1,9 +1,8 @@
 package com.lxq.ueditor;
 
 /**
- * 
- * @author a1
- *
+ * 编码器
+ * @author l1
  */
 
 public class Encoder {

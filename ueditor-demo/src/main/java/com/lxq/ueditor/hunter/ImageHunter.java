@@ -14,12 +14,12 @@ import com.lxq.ueditor.define.MultiState;
 import com.lxq.ueditor.define.State;
 import com.lxq.ueditor.upload.StorageManager;
 
-
 /**
  * 图片抓取器
- * @author hancong03@baidu.com
+ * @author l1
  *
  */
+
 public class ImageHunter {
 
 	private String filename = null;

@@ -6,19 +6,18 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.json.JSONException;
 
-import com.lxq.entity.AliyunConfigEntity;
 import com.lxq.ueditor.define.ActionMap;
 import com.lxq.ueditor.define.AppInfo;
 import com.lxq.ueditor.define.BaseState;
 import com.lxq.ueditor.define.State;
+import com.lxq.ueditor.entity.AliyunConfigEntity;
 import com.lxq.ueditor.hunter.FileManager;
 import com.lxq.ueditor.hunter.ImageHunter;
 import com.lxq.ueditor.upload.Uploader;
 
 /**
- * 
- * @author lxq
- *
+ * 操作处理
+ * @author l1
  */
 
 public class ActionEnter {
@@ -36,13 +35,13 @@ public class ActionEnter {
 	
 	private static String REGEX = "^[a-zA-Z_]+[\\w0-9_]*$";
 
-	public ActionEnter ( HttpServletRequest request, String rootPath, AliyunConfigEntity aliyunConfigEntity) {
+	public ActionEnter ( HttpServletRequest request, String rootPath, AliyunConfigEntity aliyunConfigEntity, String fileTempPath) {
 		
 		this.request = request;
 		this.rootPath = rootPath;
 		this.actionType = request.getParameter( "action" );
 		this.contextPath = request.getContextPath();
-		this.configManager = ConfigManager.getInstance( this.rootPath, this.contextPath, request.getRequestURI() );
+		this.configManager = ConfigManager.getInstance( this.rootPath, this.contextPath, request.getRequestURI(), fileTempPath );
 		
 		this.aliyunConfigEntity = aliyunConfigEntity;
 	}
@@ -88,7 +87,7 @@ public class ActionEnter {
 			case ActionMap.UPLOAD_SCRAWL:
 			case ActionMap.UPLOAD_VIDEO:
 			case ActionMap.UPLOAD_FILE:
-				conf = this.configManager.getConfig( actionCode );
+				conf = this.configManager.getConfig( actionCode );			
 				state = new Uploader( request, conf ).doExec( aliyunConfigEntity );
 				break;
 				

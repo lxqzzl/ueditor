@@ -1,4 +1,4 @@
-package com.lxq.entity;
+package com.lxq.ueditor.entity;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -7,7 +7,7 @@ import lombok.Data;
 
 /**
  * 阿里云配置类
- * @author a1
+ * @author l1
  *
  */
 

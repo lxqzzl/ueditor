@@ -8,7 +8,7 @@ import com.lxq.ueditor.Encoder;
 
 /**
  * 基本状态
- * @author a1
+ * @author l1
  *
  */
 

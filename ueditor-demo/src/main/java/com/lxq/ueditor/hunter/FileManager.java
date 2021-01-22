@@ -15,7 +15,7 @@ import com.lxq.ueditor.define.State;
 
 /**
  * 文件管理配置
- * @author lxq
+ * @author l1
  *
  */
 
